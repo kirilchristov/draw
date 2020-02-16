@@ -2,7 +2,6 @@ const webpack = require('webpack');
 
 
 module.exports = {
-  // 1
   entry: './src/index.js',
   // Babel Loader
   module: {
@@ -24,12 +23,26 @@ module.exports = {
           loader: 'url-loader',
         },
       },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
     ],
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
   },
-  // 2
   output: {
     path: `${__dirname}/dist`,
     publicPath: '/',
@@ -39,7 +52,6 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ],
-  // 3
   devServer: {
     contentBase: './dist',
     hot: true,
