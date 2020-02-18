@@ -24,6 +24,15 @@ npx install-peerdeps --dev eslint-config-airbnb
 
 npm install url-loader --save-dev
 
+5.Babel 
+@babel/plugin-proposal-class-properties
+@babel/plugin-proposal-export-default-from
+@babel/polyfill
+@babel/cli
+babel-plugin-syntax-async-functions
+@babel/plugin-transform-async-to-generator
+@babel/plugin-transform-runtime
+
 
 
 All in one: 

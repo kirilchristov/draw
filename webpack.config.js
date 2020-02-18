@@ -2,14 +2,14 @@ const webpack = require('webpack');
 
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ['@babel/polyfill', './src/index.js'],
   // Babel Loader
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'/*,'eslint-loader'*/],
+        use: ['babel-loader', 'eslint-loader'],
       },
       {
         test: /\.(woff|woff2)$/,
@@ -27,16 +27,16 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
-        ]
+          'css-loader',
+        ],
       },
       {
         test: /\.scss$/,
         use: [
           'style-loader',
           'css-loader',
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
     ],
   },
