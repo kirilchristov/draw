@@ -8,6 +8,7 @@ function Square(props) {
     <button
       className="square"
       onClick={props.onClick}
+      data-pro={props.value}
     >
       {props.value}
     </button>

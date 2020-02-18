@@ -80,15 +80,6 @@ class App extends React.Component {
     }
   }
 
-
-  // Jump to move - history function
-  // jumpTo(step) {
-  //   this.setState({
-  //     stepNumber: step,
-  //     xIsNext: (step % 2) === 0,
-  //   });
-  // }
-
   // Back one move function
   backOneMove() {
     this.setState({
@@ -109,28 +100,14 @@ class App extends React.Component {
       const itemToPrint = `${name}, ${currentSalaryList[idx]}`;
       if (idx > 0) {
         return (
-          <p key={idx}>
-            <h1>
+          <div key={idx}>
+            <h2>
               {itemToPrint}
-            </h1>
-          </p>
+            </h2>
+          </div>
         );
       }
     });
-
-
-    // const moves = history.map((step, move) => {
-    //   const desc = move
-    //     ? `Go to move #${move}`
-    //     : 'Go to game start';
-    //   return (
-    //     <li key={move}>
-    //       <button onClick={() => this.jumpTo(move)}>
-    //         {desc}
-    //       </button>
-    //     </li>
-    //   );
-    // });
 
     let status;
     if (winner) {
@@ -149,13 +126,10 @@ class App extends React.Component {
         </div>
         <div className="left-panel">
           <div className="game-info">
-            <h1>game-info left-panel</h1>
-            <div>{status}</div>
-            {/* <ol>{moves}</ol> */}
+            {/* <div>{status}</div> */}
           </div>
           <div className="charts">
-            <h1>charts left-panel</h1>
-            <button onClick={() => this.backOneMove()}>BACK</button>
+            <button id="back-button" onClick={() => this.backOneMove()}>BACK</button>
             <ol>{nameAndSalary}</ol>
           </div>
         </div>
