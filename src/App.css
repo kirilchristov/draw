@@ -1,13 +1,46 @@
-.App {
-  text-align: center;
-}
-
 .app-container {
-  border: 1px solid black;
+  background-color: gray;
+
 }
 
 #app {
-  border: 1px solid red;
   background-color: antiquewhite;
+  padding: 50px;
 }
 
+.game {
+  background-color: green;
+  padding: 50px;
+  display: flex;
+}
+
+.game-board {
+  background-color: pink;
+  
+}
+
+.game-info {
+  background-color: blue;
+}
+
+.left-panel {
+  flex-direction: column;
+}
+.charts {
+  background-color: salmon;
+}
+
+.board-row {
+  background-color: skyblue;
+  height: 100px;
+}
+
+.board-row button {
+  height: 100%;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.square {
+  margin: 0 auto;
+}

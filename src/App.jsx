@@ -142,19 +142,22 @@ class App extends React.Component {
     return (
       <div className="game">
         <div className="game-board">
-          <h1>The game</h1>
           <Board
             squares={current.squares}
             onClick={(i) => this.handleClick(i)}
           />
         </div>
-        <div className="game-info">
-          <div>{status}</div>
-          {/* <ol>{moves}</ol> */}
-        </div>
-        <div className="charts">
-          <button onClick={() => this.backOneMove()}>BACK</button>
-          <ol>{nameAndSalary}</ol>
+        <div className="left-panel">
+          <div className="game-info">
+            <h1>game-info left-panel</h1>
+            <div>{status}</div>
+            {/* <ol>{moves}</ol> */}
+          </div>
+          <div className="charts">
+            <h1>charts left-panel</h1>
+            <button onClick={() => this.backOneMove()}>BACK</button>
+            <ol>{nameAndSalary}</ol>
+          </div>
         </div>
       </div>
     );
