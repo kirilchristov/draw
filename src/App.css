@@ -1,46 +1,73 @@
 .app-container {
-  background-color: gray;
+  font-family: monospace;
 
 }
 
 #app {
-  background-color: antiquewhite;
-  padding: 50px;
-}
-
-.game {
-  background-color: green;
-  padding: 50px;
   display: flex;
 }
 
-.game-board {
-  background-color: pink;
-  
+.game {
+  padding: 50px;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  height: 100vh; 
+  width: 80%;
 }
 
-.game-info {
-  background-color: blue;
+.game-board {
+  height: 300px;
+  padding: 25px;
+  width: 50%;
+  min-width: 300px;
 }
 
 .left-panel {
   flex-direction: column;
+  padding: 25px;
+  width: 50%;
+
 }
+
 .charts {
-  background-color: salmon;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .board-row {
-  background-color: skyblue;
   height: 100px;
 }
 
-.board-row button {
-  height: 100%;
+.board-row button.square {
   width: 100px;
-  margin: 0 auto;
+  height: 100px;
+  float: left;
 }
 
-.square {
-  margin: 0 auto;
+button.square[data-pro="X"] {
+  /*remove text from button*/
+  text-indent: -9000px; 
+  text-transform: capitalize;
+  background-image: url('../src/assets/red.gif');
+  background-size: 100%; 
 }
+
+button.square[data-pro="O"] {
+  text-indent: -9000px; 
+  text-transform: capitalize;
+  background-image: url('../src/assets/blue.gif');
+  background-size: 100%; 
+}
+
+#back-button {
+  margin-top: 25px;
+  margin-left: 30px;
+  height: 30px;
+  width: 50px;
+  font-family: monospace;
+  font-size: medium;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+}
+
