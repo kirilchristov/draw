@@ -33,7 +33,7 @@ class App extends React.Component {
   // Fetching data with promises
   fetchData = async () => {
     try {
-      const result = await fetch('http://dummy.restapiexample.com/api/v1/employees');
+      const result = await fetch('https://dummy.restapiexample.com/api/v1/employees');
       const json = await result.json();
       // Generating random number based on the fetched data size, so we can stay in limits
       const randomNum = (Math.round(Math.random() * (json.data.length - 1)));
