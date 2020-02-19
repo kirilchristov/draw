@@ -49,14 +49,16 @@ button.square[data-pro="X"] {
   /*remove text from button*/
   text-indent: -9000px; 
   text-transform: capitalize;
-  background-image: url('../src/assets/red.gif');
+  /* background-image: url('../src/assets/red.gif'); */
+  background-image: url('http://giphygifs.s3.amazonaws.com/media/jQS9YkJXofyeI/giphy.gif');
   background-size: 100%; 
 }
 
 button.square[data-pro="O"] {
   text-indent: -9000px; 
   text-transform: capitalize;
-  background-image: url('../src/assets/blue.gif');
+  /* background-image: url('../src/assets/blue.gif'); */
+  background-image: url('https://i.giphy.com/media/5kFbMBOEdWjg1nItoG/giphy.gif');
   background-size: 100%; 
 }
 
